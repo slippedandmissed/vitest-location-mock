@@ -12,4 +12,9 @@ describe("when inputting a relative url", () => {
 		const location = new LocationMockRelative("http://localhost/");
 		expect(() => location.replace("/relative-url")).not.toThrow();
 	});
+
+	it("should be able to set href", () => {
+		const location = new LocationMockRelative("http://localhost/");
+		expect(() => location.href = "/relative-url").not.toThrow();
+	})
 });
